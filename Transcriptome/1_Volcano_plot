@@ -10,7 +10,7 @@ condition <- factor(c("No_response", "No_response", "No_response", "No_response"
                       "Response", "Response"))
 #Upload data#
 
-
+BCData <- read.csv("../Data_1_Diff_genes.csv")
 
 ##Run DESeq2##
 
