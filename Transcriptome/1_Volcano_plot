@@ -2,6 +2,7 @@
 
 library(DESeq2)
 library(ggplot2)
+library(httr)
 
 ##Stablish group annotation##
 
@@ -10,7 +11,11 @@ condition <- factor(c("No_response", "No_response", "No_response", "No_response"
                       "Response", "Response"))
 #Upload data#
 
-BCData <- read.csv("../LauraMCE/lncRNA_BC/Transcriptome/Data_1_Diff_genes.csv", header = TRUE)
+BCData <-read.csv(text=GET("https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/Data_1_Diff_genes.csv"), header=TRUE, row.names=1)
+
+head(BCData)
+row.names(BCData)
+colnames(BCData)
 
 ##Run DESeq2##
 
