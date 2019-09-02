@@ -11,7 +11,17 @@ condition <- factor(c("No_response", "No_response", "No_response", "No_response"
                       "Response", "Response"))
 #Upload data#
 
+##You can download data directly from Github##
+
 BCData <-read.csv(text=GET("https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/Data_1_Diff_genes.csv"), header=TRUE, row.names=1)
+
+head(BCData)
+row.names(BCData)
+colnames(BCData)
+
+##Or you can download first to your computer and then open it in R##
+
+BCData <- ("Data_1_Diff_genes.csv")
 
 head(BCData)
 row.names(BCData)
