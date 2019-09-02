@@ -21,7 +21,7 @@ colnames(BCData)
 
 ##Or you can download first to your computer and then open it in R##
 
-BCData <- ("Data_1_Diff_genes.csv")
+BCData <- read.csv("Data_1_Diff_genes.csv")
 
 head(BCData)
 row.names(BCData)
