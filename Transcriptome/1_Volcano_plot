@@ -35,6 +35,8 @@ BCresultsNR <- results(BCDE, contrast = c("condition", "No_response","Response")
 
 ##Indicate data to plot##
 
+BCresultsNR$sig <- -log10(BCresultsNR$padj) ##Create a column with aditional info of FDR (padj)##
+
 cols <- densCols(BCresultsNR$log2FoldChange, BCresultsNR$sig)
 
 ##Indicate color code##
@@ -42,7 +44,6 @@ cols <- densCols(BCresultsNR$log2FoldChange, BCresultsNR$sig)
 cols[BCresultsNR$log2FoldChange < -1.5] <- "#0066FF"
 cols[BCresultsNR$log2FoldChange > 1.5] <- "#0033CC"
 cols[BCresultsNR$pvalue == 0] <- "black"
-cols[BCresultsNR$sig < -log10(alpha) ] <- "#000033"
 cols[BCresultsNR$pvalue > 0.05] <- "#CCCCCC"
 
 ##Other graphical parameters##
