@@ -1,8 +1,10 @@
-##Open DESeq2##
+##Pre-requisites##
 
 library(DESeq2)
 library(ggplot2)
-library(httr)
+library(readr)
+library(tidyr)
+library(dplyr)
 
 ##Stablish group annotation##
 
@@ -13,23 +15,30 @@ condition <- factor(c("No_response", "No_response", "No_response", "No_response"
 
 ##You can download data directly from Github##
 
-BCData <-read.csv(text=GET("https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/Data_1_Diff_genes.csv"), header=TRUE, row.names=1)
+urlfile="https://raw.githubusercontent.com/LauraMCE/lncRNA_BC/master/Transcriptome/Data_1_Diff_genes.csv"
+Data_1_Diff_genes<-read_csv(url(urlfile))
 
-head(BCData)
-row.names(BCData)
-colnames(BCData)
+# transform the table into a dataframe, indicating that the first column is the row names
+Data_1_Diff_genes <- as.data.frame(Data_1_Diff_genes)
+rownames(Data_1_Diff_genes) <- Data_1_Diff_genes[, 1]
+Data_1_Diff_genes <- Data_1_Diff_genes[, -1]
+
+#verify that the data are correct
+head(Data_1_Diff_genes)
+row.names(Data_1_Diff_genes)
+colnames(Data_1_Diff_genes)
 
 ##Or you can download first to your computer and then open it in R##
 
-BCData <- read.csv("Data_1_Diff_genes.csv")
+Data_1_Diff_genes <- read.csv("Data_1_Diff_genes.csv")
 
-head(BCData)
-row.names(BCData)
-colnames(BCData)
+head(Data_1_Diff_genes)
+row.names(Data_1_Diff_genes)
+colnames(Data_1_Diff_genes)
 
 ##Run DESeq2##
 
-dds <- DESeqDataSetFromMatrix(BCData, DataFrame(condition), ~ condition)
+dds <- DESeqDataSetFromMatrix(Data_1_Diff_genes, DataFrame(condition), ~ condition)
 BCDE <- DESeq(dds)
 BCresultsNR <- results(BCDE, contrast = c("condition", "No_response","Response"))
 
@@ -43,7 +52,7 @@ cols <- densCols(BCresultsNR$log2FoldChange, BCresultsNR$sig)
 
 cols[BCresultsNR$log2FoldChange < -1.5] <- "#0066FF"
 cols[BCresultsNR$log2FoldChange > 1.5] <- "#0033CC"
-cols[BCresultsNR$pvalue == 0] <- "black"
+cols[BCresultsNR$pvalue == 0] <- "#000000"
 cols[BCresultsNR$pvalue > 0.05] <- "#CCCCCC"
 
 ##Other graphical parameters##
@@ -63,3 +72,19 @@ abline(v=c(-1,1), col="brown")
 ##For the new solution##
 
 VPSol <- data.frame(BCresultsNR$log2FoldChange, BCresultsNR$sig, row.names = rownames(BCresultsNR)) ##Creates a data frame with coordinates##
+
+##Rename the columns to simplify the dataframe##
+
+colnames(VPSol) <- c("FoldChange", "p_value")
+
+##Create a column with colors depending on the value of Fold Change and p-value##  
+
+VPSol$color <- ifelse((VPSol$FoldChange > 1.5) & (VPSol$p_value < 0.05), "Col_1",
+                      ifelse((VPSol$FoldChange < -1.5) & (VPSol$p_value < 0.05), "Col_2",
+                             ifelse((VPSol$FoldChange > 1.5) & (VPSol$p_value > 0.05), "Col_3",
+                                    ifelse((VPSol$FoldChange < -1.5) & (VPSol$p_value > 0.05), "Col_4",
+                                           ifelse((VPSol$FoldChange < 1.5) & (VPSol$p_value > 0.05), "Col_5", "Col_6")))))
+
+##Create plot##
+ggplot(VPSol, aes(x=FoldChange, y=p_value)) +
+  geom_point(aes(colour = color))
