@@ -29,54 +29,59 @@ It contains folders with RNA-Seq data, scripts, metadata and graphical results o
 - [Scripts and pipeline](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin)
 
 
-	````
-	..\lncRNA_BC\Transcriptome\bin
-	````
+````
+..\lncRNA_BC\Transcriptome\bin
+````
 
 
 It contains .R files with functions and scripts for the biomarker identification pipeline, and they are by numerical order of use. The complete pipeline is specified in README.md.
 
-- Data
+- [Data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data)
 
 
-	````
-	[..\lncRNA_BC\Transcriptome\data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data)
-	````
+````
+..\lncRNA_BC\Transcriptome\data
+````
 
 It contains all RNA-Seq raw data (fastq files). It contains also the reference genome in .fasta and .gff3 format.
 		
-  - Results
-		````
-		..\lncRNA_BC\Transcriptome\data\results
-		````
+   - Results
+
+````
+..\lncRNA_BC\Transcriptome\data\results
+````
 
 It contains all the processed files, and is subdivided into:
 			
-  - Quality
-			````
-			..\lncRNA_BC\Transcriptome\data\results\quality
-			````
+   - Quality
+
+````
+..\lncRNA_BC\Transcriptome\data\results\quality
+````
 			
 It contains all the FastQC quality reports in .pdf format.
 
-  - Tables
-			````
-			..\lncRNA_BC\Transcriptome\data\results\tables
-			````
+   - Tables
+
+````
+..\lncRNA_BC\Transcriptome\data\results\tables
+````
 
 It contains the output of transcripts counts in .csv.
 
    - DESeq
-			````
-			..\lncRNA_BC\Transcriptome\data\results\DESeq
-			````
+
+````
+..\lncRNA_BC\Transcriptome\data\results\DESeq
+````
 
 It contains DESeq2 objects.
 
 - Meta
-		````
-		..\lncRNA_BC\Transcriptome\meta
-		````
+
+````
+..\lncRNA_BC\Transcriptome\meta
+````
 		
 it contains the clinical information about samples in .csv format.
 
@@ -92,46 +97,49 @@ It contains .jpeg and .tiff graphical results.
 2. [Exome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome)
 
 
-	````
-	..\lncRNA_BC\Exome
-	````
+````
+..\lncRNA_BC\Exome
+````
 
 It contains folders with exome data, scripts, metadata and graphical results of the bioinformatic analysis. It contains a [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Exome/README.md) too.
 
 - Scripts and pipeline
 
-	````
-	..\lncRNA_BC\Exome\bin
-	````
+````
+..\lncRNA_BC\Exome\bin
+````
 
 It contains .R files with functions and scripts for the biomarker identification pipeline, and they are by numerical order of use. The complete pipeline is specified in README.md.
 
 - Data
 
-	````
-	..\lncRNA_BC\Exome\data
-	````
+````
+..\lncRNA_BC\Exome\data
+````
 
 It contains all exome raw data (fastq files). It contains also the reference genome in .fasta and .gff3 format.
 		
-  - Results
-		````
-		..\lncRNA_BC\Exome\data\results
-		````
+   - Results
+		
+````
+..\lncRNA_BC\Exome\data\results
+````
 
 It contains all the processed files, and is subdivided into:
 			
-  - Quality
-			````
-			..\lncRNA_BC\Transcriptome\data\results\quality
-			````
+   - Quality
+  
+````
+..\lncRNA_BC\Transcriptome\data\results\quality
+````
 			
 It contains all the FastQC quality reports in .pdf format.
 
 - Meta
-		````
-		..\lncRNA_BC\Transcriptome\meta
-		````
+
+````
+..\lncRNA_BC\Transcriptome\meta
+````
 		
 it contains the clinical information about samples in .csv format.
 
@@ -140,7 +148,10 @@ it contains the clinical information about samples in .csv format.
 
 Selected topics of Bioinformatics ([STB](https://github.com/LauraMCE/lncRNA_BC/tree/master/STB))
 
-	..\lncRNA_BC\STB
+````
+..\lncRNA_BC\STB
+
+````
 
 This folders contains activities from our course.
 
