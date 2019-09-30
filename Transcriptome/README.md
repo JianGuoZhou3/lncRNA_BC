@@ -25,3 +25,5 @@ Below is indicated in cronological order the complete pipeline
 ## Graphical results
 
 ## Gene ontology
+
+## Gene Set Enrichment Analysis
