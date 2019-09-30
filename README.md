@@ -66,7 +66,7 @@ It contains all the FastQC quality reports in .pdf format.
 
 It contains the output of transcripts counts in .csv.
 
-			- DESeq
+   - DESeq
 			````
 			..\lncRNA_BC\Transcriptome\data\results\DESeq
 			````
@@ -87,9 +87,11 @@ it contains the clinical information about samples in .csv format.
 
 It contains .jpeg and .tiff graphical results.
 
-2. Exome Analysis
 
-1. [Exome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome)
+
+2. [Exome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome)
+
+
 	````
 	..\lncRNA_BC\Exome
 	````
