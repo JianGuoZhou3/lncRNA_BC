@@ -1,14 +1,14 @@
 # lncRNA_BC
 
-#ABSTRACT
+## ABSTRACT
 It is a repository that contains information about my master's project. The main topic is lincRNA as biomarkers in breast cancer. The main objective is to identificate lincRNA biomarkers by transcriptome analysis
 
-#INTRODUCTION
+## INTRODUCTION
 
 This repository is divided into 2 kinds of analysis:
 
-1.- Transcriptome Analysis
-2.- Exome Analysis
+1. Transcriptome Analysis
+2. Exome Analysis
 
 
 Transcriptome Analysis is for identification of lincRNA over or sub expressed in breast cancer patients who didn't response to neoadjuvant chemotherapy treatment. The main objective for this analysis is to identify the association of this lincRNA with coding genes and how they are involved in chemoresistance mechanisms
@@ -17,216 +17,128 @@ In the other hand, the exome analysis is performed with the objective to identif
 
 The final aim of this whole project is to predict functional association between lincRNA and coding genes through bioinformatic analysis and then validate them to identify possible therapeutic targets and panels of biomarkers for prediction and prognostic in breast cancer patients.
 
-#INDEX
+## INDEX
 
-1.- Transcriptome analysis
+1. [Transcriptome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome)
+	````
 	..\lncRNA_BC\Transcriptome
+	````
 
-It contains folders with RNA-Seq data, pipelines and results of the bioinformatic analysis
+It contains folders with RNA-Seq data, scripts, metadata and graphical results of the bioinformatic analysis. It contains a [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/README.md) too.
 
-	1.1 Scripts and pipeline
+- [Scripts and pipeline](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin)
 
-	..\lncRNA_BC\Transcriptome\Scripts
+
+	````
+	..\lncRNA_BC\Transcriptome\bin
+	````
+
 
 It contains .R files with functions and scripts for the biomarker identification pipeline, and they are by numerical order of use. The complete pipeline is specified in README.md.
 
-	1.2 RNA-Seq data
-	..\lncRNA_BC\Transcriptome\RNASeq
+- Data
 
-It contains FastQ Files and Quality reports from breast cancer patients. In README.md are described sequencing features. There is organized in to folders
+
+	````
+	[..\lncRNA_BC\Transcriptome\data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data)
+	````
+
+It contains all RNA-Seq raw data (fastq files). It contains also the reference genome in .fasta and .gff3 format.
 		
-		..\lncRNA_BC\Transcriptome\RNASeq\Fastq
+  - Results
+		````
+		..\lncRNA_BC\Transcriptome\data\results
+		````
 
-It contains all the Fastq files.
-
-		..\lncRNA_BC\Transcriptome\RNASeq\Quality
-
+It contains all the processed files, and is subdivided into:
+			
+  - Quality
+			````
+			..\lncRNA_BC\Transcriptome\data\results\quality
+			````
+			
 It contains all the FastQC quality reports in .pdf format.
 
-	1.3 RNA-Seq Grooming
+  - Tables
+			````
+			..\lncRNA_BC\Transcriptome\data\results\tables
+			````
 
-	..\lncRNA_BC\Transcriptome\Groom
+It contains the output of transcripts counts in .csv.
 
-It contains the output of RNA-Seq Groomer Script. They are also FastQ files.
+			- DESeq
+			````
+			..\lncRNA_BC\Transcriptome\data\results\DESeq
+			````
 
-	1.4 Sequence alignment
+It contains DESeq2 objects.
 
-	..\lncRNA_BC\Transcriptome\RNASTAR
-
-It contains the output of RNA-STAR script for alignment. It is divided into 4 folders
-
-		..\lncRNA_BC\Transcriptome\RNASTAR\refgen
-
-it contains the .gtf file of Comprehensive annotation of GENCODEV.7.
-
-		..\lncRNA_BC\Transcriptome\RNASTAR\Readspergene
-
-It contains .tab files, with normalized counts in TPM units of genes
-
-		..\lncRNA_BC\Transcriptome\RNASTAR\log
-
-It contains .log files.
-
-	1.5 Transcripts counts
-
-	..\lncRNA_BC\Transcriptome\Salmon
-
-It contains .tab output files from transcripts counting process.
-
-	1.6 Differential expression analysis
-
-	..\lncRNA_BC\Transcriptome\DEA
-
-It contains the differential expression analysis results. It is divided in 2 folders
+- Meta
+		````
+		..\lncRNA_BC\Transcriptome\meta
+		````
 		
-		..\lncRNA_BC\Transcriptome\DEA\DESeq2
+it contains the clinical information about samples in .csv format.
 
-It contains the output file from DESeq2 analysis () and it also contain the differential expression report in .tab format.
+- Graphs
+		````
+		..\lncRNA_BC\Transcriptome\Graphs
+		````
 
-		..\lncRNA_BC\Transcriptome\DEA\ER
+It contains .jpeg and .tiff graphical results.
 
-It contains the output file from EdgeR analysis () and it also contain the differential expression report in .tab format.
+2. Exome Analysis
 
-	1.7 Gene Ontology Analysis
-
-	..\lncRNA_BC\Transcriptome\GO
-
-It contains the output of GO analysis
-
-	1.8 Statiscal Analysis
-
-	..\lncRNA_BC\Transcriptome\STATS
-
-It contains the output of clinical value analysis. It is divided in 5 folders:
-
-		..\lncRNA_BC\Transcriptome\STATS\ROC
-
-It contains the output of ROC curve analysis
-
-		..\lncRNA_BC\Transcriptome\STATS\CHI
-
-It contains the .tab file from Chi Square analysis
-
-		..\lncRNA_BC\Transcriptome\STATS\LOGREG
-
-It contains the .tab output file from logistic regression
-
-		..\lncRNA_BC\Transcriptome\STATS\ODDS
-
-It contains the .txt output file from Odds Ratio analysis
-
-		..\lncRNA_BC\Transcriptome\STATS\CORR
-
-It contains the .txt output file from correlation analysis
-
-	1.9 Graphical Analysis
-
-	..\lncRNA_BC\Transcriptome\Graphs
-
-It contains all the graphical results from the DESeq2 analysis. It is divided in 5 folders:
-
-		..\lncRNA_BC\Transcriptome\Graphs\HM
-
-It contains heatmaps
-
-		..\lncRNA_BC\Transcriptome\Graphs\PCA
-
-It contains PCA plots and the output file from PCA analysis (.tab)
-
-		..\lncRNA_BC\Transcriptome\Graphs\VP
-
-It contains Volcano plots
-
-		..\lncRNA_BC\Transcriptome\Graphs\Bar
-
-It contains barplots
-
-		..\lncRNA_BC\Transcriptome\Graphs\Box
-
-It contains boxplots
-
-	2.0 Clinical information
-
-	..\lncRNA_BC\Transcriptome\Clinic
-
-It contains in .tab and .txt files clinical information about patients.
-
-
-	3.0 Network Analysis
-
-	..\lncRNA_BC\Transcriptome\NetAnalysis
-
-It contains the output of gene network analysis.
-
-2.- Exome Analysis
-
+1. [Exome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome)
+	````
 	..\lncRNA_BC\Exome
+	````
 
-It contains folders with exome sequencing data, analysis and results
+It contains folders with exome data, scripts, metadata and graphical results of the bioinformatic analysis. It contains a [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Exome/README.md) too.
 
-	1.0 Exome data
+- Scripts and pipeline
 
-	..\lncRNA_BC\Exome\SeqData
+	````
+	..\lncRNA_BC\Exome\bin
+	````
 
-It contains Fasta files and quality controls. Is divided into 3 folders:
+It contains .R files with functions and scripts for the biomarker identification pipeline, and they are by numerical order of use. The complete pipeline is specified in README.md.
 
-		..\lncRNA_BC\Exome\SeqData\Fasta
+- Data
 
-It contains Fasta files
+	````
+	..\lncRNA_BC\Exome\data
+	````
 
-		..\lncRNA_BC\Exome\SeqData\QualityRep
-
-It contains quality reports
-
-		..\lncRNA_BC\Exome\SeqData\QualityCtrl
-
-It contains quality control files from Call variant analysis
-
-	1.1 Alignment
-
-	..\lncRNA_BC\Exome\Alignment
-
-It contains alignment files and in a subfolder there is located the reference genome
+It contains all exome raw data (fastq files). It contains also the reference genome in .fasta and .gff3 format.
 		
-		..\lncRNA_BC\Exome\Alignment\Ref
+  - Results
+		````
+		..\lncRNA_BC\Exome\data\results
+		````
 
-	1.2 Variants calling
+It contains all the processed files, and is subdivided into:
+			
+  - Quality
+			````
+			..\lncRNA_BC\Transcriptome\data\results\quality
+			````
+			
+It contains all the FastQC quality reports in .pdf format.
 
-	..\lncRNA_BC\Exome\Var
+- Meta
+		````
+		..\lncRNA_BC\Transcriptome\meta
+		````
+		
+it contains the clinical information about samples in .csv format.
 
-It contains all the output files from variant analysis
 
-	1.3 False positive clear
+# APENDIX 1
 
-	..\lncRNA_BC\Exome\Clean
-
-It contains the output files from filtering
-
-	1.4 Graphical analysis
-
-	..\lncRNA_BC\Exome\Graphs
-
-It contains graphical results
-
-	1.5 Clinical information
-
-	..\lncRNA_BC\Exome\Clinic
-
-It contains all clinical data and variables in .tab files
-
-	1.6 Scripts
-	
-	..\lncRNA_BC\Exome\Scripts
-
-It contains all the scripts
-
-#APENDIX 1
-
-Selected topics of Bioinformatics
+Selected topics of Bioinformatics ([STB](https://github.com/LauraMCE/lncRNA_BC/tree/master/STB))
 
 	..\lncRNA_BC\STB
 
 This folders contains activities from our course.
-
-#END
 
