@@ -30,11 +30,9 @@ The final aim of this whole project is to predict functional association between
 
       - Tables ```..\lncRNA_BC\Transcriptome\data\results\tables```: It contains the output of transcripts counts in .csv.
 
-      - DESeq ```..\lncRNA_BC\Transcriptome\data\results\DESeq```: It contains DESeq2 objects.
-
 - Meta ```..\lncRNA_BC\Transcriptome\meta```: It contains the clinical information about samples in .csv format.
 
-- Graphs ```..\lncRNA_BC\Transcriptome\Graphs```: It contains .jpeg and .tiff graphical results.
+- Graphs ```..\lncRNA_BC\Transcriptome\Graphs```: It contains .jpeg graphical results.
 
 2. [Exome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome) ```..\lncRNA_BC\Exome```: It contains folders with exome data, scripts, metadata and graphical results of the bioinformatic analysis. It contains a [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Exome/README.md) too.
 
