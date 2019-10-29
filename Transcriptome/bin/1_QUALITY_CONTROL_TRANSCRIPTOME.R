@@ -4,7 +4,7 @@
 
 ##Packages to import files##
 
-install.packages("plyr", "readr") #v. 1.8.4 & v.1.3.1#
+install.packages("plyr", "readr", "htmltools") #v. 1.8.4, v.1.3.1 & 0.3.6#
 
 ##Packages for Quality Control##
 
@@ -12,6 +12,7 @@ install.packages("BiocManager") #v. 3.0#
 
 library(plyr)
 library(readr)
+library(htmltools)
 library(BiocManager)
 
 BiocManager::install("Rqc") #v.1.18.0#
@@ -33,3 +34,4 @@ list.files(CMLA_QC, ".fastqsanger", full.names=TRUE) #Indicates files for QC rep
 QC <- rqcQA(files, workers=1) #Run QC analysis#
 QC_REPORT <- rqcReport(QC) #Print and save QC report#
 browseURL(QC_REPORT) #Visualize QC report#
+save_html(QC_REPORT, "~/lncRNA_BC/Transcriptome/data/results/quality/QC.html", background = "white", libdir = "CMLA") #Save html file#
