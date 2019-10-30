@@ -19,7 +19,7 @@ The final aim of this whole project is to predict functional association between
 
 ## INDEX
 
-1. [Transcriptome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome) ```..\lncRNA_BC\Transcriptome```: It contains folders with RNA-Seq data, scripts, metadata and graphical results of the bioinformatic analysis. It contains a [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/README.md) too.
+1. [Transcriptome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome) ```..\lncRNA_BC\Transcriptome```: It contains folders with RNA-Seq data (paired-end), scripts, metadata and graphical results of the bioinformatic analysis. It contains a [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/README.md) too.
 
 - [Scripts and pipeline](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin) ```..\lncRNA_BC\Transcriptome\bin```: It contains .R files with functions and scripts for the biomarker identification pipeline, and they are by numerical order of use. The complete pipeline is specified in README.md.
 
