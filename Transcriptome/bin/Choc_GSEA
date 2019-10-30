@@ -1,0 +1,64 @@
+##Pre-requisites##
+
+install.packages("readr","tidyr","dplyr") #V.1.3.1, v.1.0.0, v.0.8.3#
+install.packages("BiocManager") #v.3.9.0#
+library(BiocManager)
+
+BiocManager::install("SeqGSEA") #v.1.46.0#
+BiocManager::install("DESeq2") #v.1.24.0#
+
+library(SeqGSEA)
+library(readr)
+library(tidyr)
+library(dplyr)
+
+#Upload data#
+
+##You can download data directly from Github##
+
+urlfile="https://raw.githubusercontent.com/LauraMCE/lncRNA_BC/master/Transcriptome/Data_1_Diff_genes.csv"
+Data_1_Diff_genes<-read_csv(url(urlfile))
+
+# transform the table into a dataframe, indicating that the first column is the row names
+Data_1_Diff_genes <- as.data.frame(Data_1_Diff_genes)
+rownames(Data_1_Diff_genes) <- Data_1_Diff_genes[, 1]
+Data_1_Diff_genes <- Data_1_Diff_genes[, -1]
+
+#verify that the data are correct
+head(Data_1_Diff_genes)
+row.names(Data_1_Diff_genes)
+colnames(Data_1_Diff_genes)
+
+##Or you can download first to your computer and then open it in R##
+
+Data_1_Diff_genes <- read.csv("Data_1_Diff_genes.csv")
+
+head(Data_1_Diff_genes)
+row.names(Data_1_Diff_genes)
+colnames(Data_1_Diff_genes)
+
+#Stablish conditions for GSEA analysis#
+
+label <- as.factor(c("No_response", "No_response", "No_response", "No_response", 
+                    "No_response", "No_response", "No_response", "Response", 
+                     "Response", "No_response"))
+DEG <- runDESeq(ata_1_Diff_genes, label) #It runs Differential Expression Analysis for GSEA#
+DEGres <- DENBStat4GSEA(DEG)
+permuteMat <- genpermuteMat(label)
+DEpermNBstat <- DENBStatPermut4GSEA(DEG, permuteMat)
+
+#Score normalization#
+DEscore.normFac <- normFactor(DEpermNBstat)
+DEscore <- scoreNormalization(DEGres$NBstat, DEscore.normFac)
+DEscore.perm <- scoreNormalization(DEpermNBstat, DEscore.normFac)
+gene.score <- geneScore(DEscore, DEweight=1)
+gene.score.perm <- genePermuteScore(DEscore.perm, DEweight=1)
+
+#Perform GSEA#
+geneIDs <- rownames(geneCounts)
+gene.set <- loadGenesets(geneset.file, geneIDs, geneID.type="ensembl",
+          + genesetsize.min = 5, genesetsize.max = 1000)
+#Gene set enrichment analysis#
+gene.set <- GSEnrichAnalyze(gene.set, gene.score, gene.score.perm, weighted.type=1)
+#Enrichment analysis results#
+GSEAres <- GSEAresultTable(gene.set, TRUE)
