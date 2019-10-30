@@ -42,7 +42,7 @@ colnames(Data_1_Diff_genes)
 label <- as.factor(c("No_response", "No_response", "No_response", "No_response", 
                     "No_response", "No_response", "No_response", "Response", 
                      "Response", "No_response"))
-DEG <- runDESeq(ata_1_Diff_genes, label) #It runs Differential Expression Analysis for GSEA#
+DEG <- runDESeq(Data_1_Diff_genes, label) #It runs Differential Expression Analysis for GSEA#
 DEGres <- DENBStat4GSEA(DEG)
 permuteMat <- genpermuteMat(label)
 DEpermNBstat <- DENBStatPermut4GSEA(DEG, permuteMat)
