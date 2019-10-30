@@ -18,7 +18,7 @@ Below is indicated in cronological order the complete pipeline
 
 ## Gene ontology (~/bin/3_DIFF_EXP_ANALYSIS_TRANSCRIPTOME.R)
 
-## Gene Set Enrichment Analysis (WORK IN PROCESS! See [issue](https://github.com/LauraMCE/lncRNA_BC/issues/15)
+## Gene Set Enrichment Analysis (WORK IN PROCESS! See [issue](https://github.com/LauraMCE/lncRNA_BC/issues/15))
 
 ## Network Analysis (WORK IN PROCESS!)
 
