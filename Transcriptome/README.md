@@ -26,4 +26,4 @@ Below is indicated in cronological order the complete pipeline
 
 Results are provided in [/data/results](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results), in tables (.csv files)
 
-Other graphical results are in [/Graphs](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results), in tables (.csv files) (.jgp files). Principally heatmaps and volcano plots for friendly visualization of differential expression analysis results.
+Other graphical results are in [/Graphs](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/Graphs) (.jgp files). Principally heatmaps and volcano plots for friendly visualization of differential expression analysis results.
