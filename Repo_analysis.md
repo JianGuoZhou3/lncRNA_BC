@@ -1,4 +1,4 @@
-#Analysis of Identification of lincRNA as predictive biomarkers in breast cancer#
+#Analysis of Identification of lincRNA as predictive biomarkers in breast cancer
 
 Breast cancer is the most common malignant neoplasia in women ([WHO](https://www.who.int/cancer/prevention/diagnosis-screening/breast-cancer/en/)). For that reason, there are many clinical strategies diagnosis and treatment-decision tools based principally in detection of proteins by immunhistochemical techniques or by PCR analysis (to detect mRNA) (Patani, 2013).
 However, less than %50 of the patients could respond to treatment in the clinical outcome, generating the necessity of better oncological management. In that sense, the development of better techniques is the new focus of traslational medicine (Alcaraz, 2017) and many of them are based in molecular biology techniques. One of this techniques is RNA Next Generation Sequencing
