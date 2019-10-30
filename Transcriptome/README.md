@@ -24,6 +24,6 @@ Below is indicated in cronological order the complete pipeline
 
 ## Graphical results (~/bin/4_GRAPHICAL_ANALYSIS.R)
 
-Results are provided in [/data/results](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results), in tables (.csv files)
+Results are provided in [/data/results](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results), in [/data/results/tables](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results/tables) there is the summary result table of differential expression analysis (.csv file). In [/data/results/quality](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results/quality) there are quality reports from QC analysis
 
 Other graphical results are in [/Graphs](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/Graphs) (.jgp files). Principally heatmaps and volcano plots for friendly visualization of differential expression analysis results.
