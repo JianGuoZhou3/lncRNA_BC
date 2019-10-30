@@ -25,6 +25,8 @@ CMLADIFF <- subset(CMLARESULT, CMLARESULT$padj < 0.05)
 
 CMLADIFFCUT <- subset(CMLADIFFCUT, CMLADIFF$log2FoldChange > 1.5) ##To obtain only differential expressed genes significant and overexpressed in No_response patients##
 
+write.csv(CMLADIFF, "~/lncRNA_BC/Transcriptome/data/results/tables/CMLADIFF.csv")
+
 ##Gene Ontology Analysis##
 
 GOCMLA = CMLADIFF ##Creates GO object##
