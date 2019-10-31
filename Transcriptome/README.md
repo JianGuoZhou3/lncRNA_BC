@@ -6,7 +6,7 @@ All raw data is provided in [/data](https://github.com/LauraMCE/lncRNA_BC/tree/m
 
 In the other hand, all the scripts are in [/bin](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin). Below is indicated in cronological order the complete pipeline
 
-## 1_QUALITYT_CONTROL_TRANSCRIPTOME.R (~/bin/1_QUALITY_CONTROL_TRANSCRIPTOME.R)
+## 1_QUALITY_CONTROL_TRANSCRIPTOME.R (~/bin/1_QUALITY_CONTROL_TRANSCRIPTOME.R)
 
 This script allows you to perform a quality analysis for fastq files and saves results in ~/data/results/quality.
 
