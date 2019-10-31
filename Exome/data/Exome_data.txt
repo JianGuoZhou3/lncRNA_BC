@@ -1,0 +1,1 @@
+#Here will be DNA-Seq raw data, as fastq files, identified as paired-end sequencing data (*_1 for forward file and *_2 for reverse file)#

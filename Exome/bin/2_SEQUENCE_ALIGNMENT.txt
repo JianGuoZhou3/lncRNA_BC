@@ -1,0 +1,1 @@
+#In here will be the code for sequence alignment and calling variants. The alignment will be to genome reference hg38 (available in GENCODE). It also will annotate the data and will perform the calling of variants. It consists in normalize and count SNP variants. The tables of SNP variants results will be located in ~/data/results#

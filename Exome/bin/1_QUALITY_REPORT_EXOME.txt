@@ -1,0 +1,1 @@
+#In here will be the script to implement quality analysis on exome data. It will be treated as paired-end data, and will generate .html files that will be located in ~/Exome/data/results/quality#
