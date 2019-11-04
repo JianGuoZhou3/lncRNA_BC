@@ -71,11 +71,11 @@ $ sudo apt-get install make STAR
 - Basic Workflow 
 
 `STAR --option1-name option1-value(s)--option2-name option2-value(s) ... #STAR basic command line#`
-  - Generate genome indexes files
-  - Mapping reads
+  1. Generate genome indexes files
+  2. Mapping reads
 
 ```
-#To generate genome indexes#
+#1. To generate genome indexes#
 
 --runThreadN #defines the number of threads to be used for genome generation, it has to be set to the number of available cores on the server node#
 
@@ -90,7 +90,7 @@ format#
 
 --sjdbOverhang #specifies the length of the genomic sequence around the annotated junction to be used in constructing the splice junctions database#
 
-#To map reads#
+#2. To map reads#
 
 --runThreadN #defines the number of threads to be used for genome generation, it has to be set to the number of available cores on the server node#
 
