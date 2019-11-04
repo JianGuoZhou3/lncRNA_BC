@@ -1,7 +1,7 @@
 # lncRNA_BC
 
 ## ABSTRACT
-It is a repository that contains information about my master's project. The main topic is lincRNA as biomarkers in breast cancer. The main objective is to identificate lincRNA biomarkers by transcriptome analysis
+It is a repository that contains information about my master's project. The main topic is lincRNA as biomarkers in breast cancer. The main objective is to identify lincRNA biomarkers by transcriptome analysis.
 
 ## INTRODUCTION
 
@@ -11,9 +11,9 @@ This repository is divided into 2 kinds of analysis:
 2. Exome Analysis
 
 
-Transcriptome Analysis is for identification of lincRNA over or sub expressed in breast cancer patients who didn't response to neoadjuvant chemotherapy treatment. The main objective for this analysis is to identify the association of this lincRNA with coding genes and how they are involved in chemoresistance mechanisms
+Transcriptome Analysis is for the identification of lincRNA over or sub-expressed in breast cancer patients who didn't response to neoadjuvant chemotherapy treatment. The main objective for this analysis is to identify the association of this lincRNA with coding genes and how they are involved in chemoresistance mechanisms.
 
-In the other hand, the exome analysis is performed with the objective to identify the possible genetic cause of the distortion in coding gene expression profiles in chemoresistance in breast cancer patients, and if it is related to some clinical variables, like molecular subtype or hormonal receptors expression. With this information, we will be able to associate the genetic profile of coding genes to prognostic and prediction in order to provide benefits for patients management.
+On the other hand, the exome analysis is performed with the objective to identify the possible genetic cause of the distortion in coding gene expression profiles in chemoresistance in breast cancer patients, and if it is related to some clinical variables, like molecular subtype or hormonal receptors expression. With this information, we will be able to associate the genetic profile of coding genes to prognostic and prediction in order to provide benefits for patients management.
 
 The final aim of this whole project is to predict functional association between lincRNA and coding genes through bioinformatic analysis and then validate them to identify possible therapeutic targets and panels of biomarkers for prediction and prognostic in breast cancer patients.
 
@@ -21,7 +21,7 @@ The final aim of this whole project is to predict functional association between
 
 1. [Transcriptome analysis](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome) ```..\lncRNA_BC\Transcriptome```: It contains folders with RNA-Seq data (paired-end), scripts, metadata and graphical results of the bioinformatic analysis. It contains a [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/README.md) too.
 
-- [Scripts and pipeline](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin) ```..\lncRNA_BC\Transcriptome\bin```: It contains .R files with functions and scripts for the biomarker identification pipeline, and they are by numerical order of use. The complete pipeline is specified in README.md.
+- [Scripts and pipeline](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin) ```..\lncRNA_BC\Transcriptome\bin```: It contains .R files with functions and scripts for the biomarker identification pipeline, that are organized in chronological order of use. The complete pipeline is specified in [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/README.md).
 
 - [Data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data) ```..\lncRNA_BC\Transcriptome\data```: It contains all RNA-Seq raw data (fastq files).
 
