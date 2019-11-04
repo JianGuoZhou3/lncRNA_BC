@@ -4,7 +4,7 @@
 
 RNA-Seq is a molecular biology methodology based on next generation sequencing that is use to detect presence and quantity of RNA into a sample at a given moment (Figure 1), that is known as *Transcriptome* (Kukurba, 2015). In clinical research, RNA-Seq is a powerful tool because we can analyze RNA splicing, post-transcriptional modifications, gene fusions, mutations and differentially expressed genes, providing us a broad molecular description and  allowing the identification of new molecular targets for treatment and new biomarkers in prognostic and in the prediction of treatment response (Soneson, 2016).
 
-![RNASeq](C:\Users\laura\Desktop\Urgente\RNASeq.jpg)
+![RNASeq](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/RNASeq.jpg)
 
 Figure 1: **RNA Sequencing**. We can select only poly-A RNA for sequencing (left) or total RNA (poly-A and non poly-Adenilated RNA). Then, RNA must be fragmented to perform reverse transcription to obtain cDNA. Adapters and identifiers then will be added to finally carry out the sequencing process.
 
@@ -12,7 +12,7 @@ The RNA sequencing results are informative when we assign a meaning to all this 
 
 
 
-![RNAseqWorkflow](C:\Users\laura\Desktop\Urgente\RNAseqWorkflow.png)
+![RNAseqWorkflow](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/RNAseqWorkflow.png)
 
 
 
@@ -32,7 +32,7 @@ STAR algorith is divided in two pahses. In the first phase, STAR searches for se
 
 
 
-![MMP](C:\Users\laura\Desktop\Urgente\MMP.jpg)
+![MMP](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/MMP.jpg)
 
 Figure 3: **Schematic representation of the Maximum Mappable Prefix**
 **search** in the STAR algorithm for detecting (a) splice junctions, (b) mismatches
@@ -59,38 +59,50 @@ In the second phase, STAR builds the alignment of the read sequence by "stitchin
 
 Download STAR from [here](https://github.com/alexdobin/STAR). Then compile it with *make* in source directory.
 
+```
 #To download and install STAR#
 
 $ sudo apt-get update
 $ sudo apt-get install g++
 $ sudo apt-get install make STAR
 
+```
 
+- Basic Workflow 
 
-- Basic Workflow STAR --option1-name option1-value(s)--option2-name option2-value(s) ... #STAR basic command line#
+`STAR --option1-name option1-value(s)--option2-name option2-value(s) ... #STAR basic command line#`
   - Generate genome indexes files
   - Mapping reads
 
+```
 #To generate genome indexes#
---runThreadN #defines the number of threads to be used for genome generation, it has
-to be set to the number of available cores on the server node#
---runMode **genomeGenerate**  #directs STAR to run genome indices generation job#.
---genomeDir #specifies path to the directory where the genome indices are stored#
---genomeFastaFiles #specifies one or more FASTA files with the genome reference sequences#
---sjdbGTFfile #specifies the path to the file with annotated transcripts in the standard GTF
+
+--runThreadN #defines the number of threads to be used for genome generation, it has to be set to the number of available cores on the server node#
+
+--runMode **genomeGenerate**  #directs STAR to run genome indices generation job#
+
+--genomeDir #specifies path to the directory where the genome indices are stored#
+
+--genomeFastaFiles #specifies one or more FASTA files with the genome reference sequences#
+
+--sjdbGTFfile #specifies the path to the file with annotated transcripts in the standard GTF
 format#
---sjdbOverhang #specifies the length of the genomic sequence around the annotated junction
-to be used in constructing the splice junctions database#
+
+--sjdbOverhang #specifies the length of the genomic sequence around the annotated junction to be used in constructing the splice junctions database#
 
 #To map reads#
 
---runThreadN #defines the number of threads to be used for genome generation, it has
-to be set to the number of available cores on the server node#
---genomeDir #specifies path to the directory where the genome indices are stored "/path/to/genomeDir"#
---readFilesIn  #specifies path to the fastq files are stored "/path/to/read1 [/path/to/read2 ]"#
---readFilesCommand **UncompressionCommand** #   Use if the fastq files are compressed, where UncompressionCommand is the un-compression command#
+--runThreadN #defines the number of threads to be used for genome generation, it has to be set to the number of available cores on the server node#
+
+--genomeDir #specifies path to the directory where the genome indices are stored "/path/to/genomeDir"#
+
+--readFilesIn  #specifies path to the fastq files are stored "/path/to/read1 [/path/to/read2 ]"#
+
+--readFilesCommand **UncompressionCommand** # Use if the fastq files are compressed, where UncompressionCommand is the un-compression command#
 
 --quantMode **GeneCounts** #To generate the number of reads per gene in tabular file#
+
+```
 
 #### Output files
 
