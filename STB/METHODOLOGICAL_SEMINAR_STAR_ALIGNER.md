@@ -79,7 +79,7 @@ $ sudo apt-get install make STAR
 
 --runThreadN #defines the number of threads to be used for genome generation, it has to be set to the number of available cores on the server node#
 
---runMode **genomeGenerate**  #directs STAR to run genome indices generation job#
+--runMode genomeGenerate  #directs STAR to run genome indices generation job#
 
 --genomeDir #specifies path to the directory where the genome indices are stored#
 
@@ -98,9 +98,9 @@ format#
 
 --readFilesIn  #specifies path to the fastq files are stored "/path/to/read1 [/path/to/read2 ]"#
 
---readFilesCommand **UncompressionCommand** # Use if the fastq files are compressed, where UncompressionCommand is the un-compression command#
+--readFilesCommand UncompressionCommand # Use if the fastq files are compressed, where UncompressionCommand is the un-compression command#
 
---quantMode **GeneCounts** #To generate the number of reads per gene in tabular file#
+--quantMode GeneCounts #To generate the number of reads per gene in tabular file#
 
 ```
 
