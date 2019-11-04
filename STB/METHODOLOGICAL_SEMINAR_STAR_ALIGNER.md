@@ -4,7 +4,7 @@
 
 RNA-Seq is a molecular biology methodology based on next generation sequencing that is use to detect presence and quantity of RNA into a sample at a given moment (Figure 1), that is known as *Transcriptome* (Kukurba, 2015). In clinical research, RNA-Seq is a powerful tool because we can analyze RNA splicing, post-transcriptional modifications, gene fusions, mutations and differentially expressed genes, providing us a broad molecular description and  allowing the identification of new molecular targets for treatment and new biomarkers in prognostic and in the prediction of treatment response (Soneson, 2016).
 
-![RNASeq.jpg](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/RNASeq.jpg)
+![RNASeq.jpg](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/RNASeq.jpg?raw=true)
 
 Figure 1: **RNA Sequencing**. We can select only poly-A RNA for sequencing (left) or total RNA (poly-A and non poly-Adenilated RNA). Then, RNA must be fragmented to perform reverse transcription to obtain cDNA. Adapters and identifiers then will be added to finally carry out the sequencing process.
 
@@ -12,7 +12,7 @@ The RNA sequencing results are informative when we assign a meaning to all this 
 
 
 
-![RNAseqWorkflow.png](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/RNAseqWorkflow.png)
+![RNAseqWorkflow.png](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/RNAseqWorkflow.png?raw=true)
 
 
 
@@ -32,7 +32,7 @@ STAR algorith is divided in two pahses. In the first phase, STAR searches for se
 
 
 
-![MMP.jpg](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/MMP.jpg)
+![MMP.jpg](https://github.com/LauraMCE/lncRNA_BC/edit/master/STB/MMP.jpg?raw=true)
 
 Figure 3: **Schematic representation of the Maximum Mappable Prefix**
 **search** in the STAR algorithm for detecting (a) splice junctions, (b) mismatches
