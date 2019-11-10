@@ -1,7 +1,7 @@
 # lncRNA_BC
 
 ## ABSTRACT
-It is a repository that contains information about my master's project. The main topic is lincRNA as biomarkers in breast cancer. The main objective is to identify lincRNA biomarkers by transcriptome analysis.
+It is a repository that contains information about my master's project. The main topic is lincRNA as biomarkers in breast cancer. The main objective is to identify lincRNA biomarkers by transcriptome analysis. For more information about breast cancer and the use of lincRNA as biomarkers, please check the general [Repo_Analysis](https://github.com/LauraMCE/lncRNA_BC/blob/master/Repo_analysis.md).
 
 ## INTRODUCTION
 
