@@ -4,7 +4,19 @@ In this folder are all the data and scripts that were used for the identificatio
 
 ## [/data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data)
 
-All raw data is provided in [/data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data).
+All raw data is provided in [/data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data). This folder contains 20 .fastqsanger files, identified by this code:
+
+CMLA#XX_#.fastq
+
+(Patient's ID)(Response group: NR = No response, R = Response)_(Orientation of paired-end reads: 1=Forward, 2=Reverse).extension
+
+There is also [Promlc](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/data/results/Promlc.csv) file, for cell line analysis in RT-qPCR to validate experimentally lincRNA.
+
+Results are also provided in [/data/results](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results), in [/data/results/tables](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results/tables) there is the summary result table of differential expression analysis ([Data_1_Diff_genes](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/data/results/tables/Data_1_Diff_genes.csv) file). 
+
+In [/data/results/quality](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results/quality) there are quality reports from QC analysis for 4 representative samples: CMLA1 and CMLA2 for No_Response group and CMLA9 and CMLA10 for Response group, which follows code name from /data.
+
+## [/bin](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin)
 
 In the other hand, all the scripts are in [/bin](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin). The complete pipeline is indicated below in cronological order
 
@@ -28,10 +40,14 @@ This script uses the DESeq2 tool to perform a differential expression analysis. 
 
 This separate script enables the user to to modify or add graphical analyses. By default it contains the code to generate Volcano plots and heatmaps from DESEQ2 results, and then save them in ~/Graphs.
 
+### OTHERS
+
+The files [Choc_GSEA](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/bin/Choc_GSEA) and [Choc_Volcano_plot](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/bin/Choc_Volcano_plot) are 2 scripts that had errors and were added to solve a [GSEA](https://github.com/LauraMCE/lncRNA_BC/issues/15) and a [graphical](https://github.com/LauraMCE/lncRNA_BC/issues/8) issues. Because they were closed, the corrected code was inserted in their respective .R data in /bin.
+
 ## [/meta](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/meta)
 
 Clinical data is provided in [/meta](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/meta), which contains a .txt table with clinical relevant information for Response to treatment analysis: Patient's ID, Response and Clincal tage (Stage).
 
-Results are provided in [/data/results](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results), in [/data/results/tables](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results/tables) there is the summary result table of differential expression analysis (.csv file). In [/data/results/quality](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data/results/quality) there are quality reports from QC analysis
+## [/Graphs](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/Graphs)
 
 Other graphical results are in [/Graphs](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/Graphs) (.jgp and .png files). Principally heatmaps and volcano plots for friendly visualization of differential expression analysis results.
