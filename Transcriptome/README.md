@@ -26,7 +26,7 @@ This script allows you to perform a quality analysis for fastq files and save th
 
 ### 2_COUNT_READS_TRANSCRIPTOME.R (~/bin/2_COUNT_READS_TRANSCRIPTOME.R)
 
-This script performs the alignment of sequence reads to the reference genome hg38. After that, this script generates a count table file to perform differential expression analysis with DESeq2 (Next script).
+This script performs the alignment of sequence reads to the reference genome [hg38](https://www.gencodegenes.org/human/)(Comprehensive gene annotation GTF file, which contain ALL regions in genome). After that, this script generates a count table file to perform differential expression analysis with DESeq2 (Next script).
 
 ### 3_DIFF_EXP_ANALYSIS_TRANSCRIPTOME.R (~/bin/3_DIFF_EXP_ANALYSIS_TRANSCRIPTOME.R)
 
