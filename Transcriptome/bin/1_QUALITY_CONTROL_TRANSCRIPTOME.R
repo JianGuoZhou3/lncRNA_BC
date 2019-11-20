@@ -22,7 +22,7 @@ library(BiocStyle)
 library(Rqc)
 
 #Import files to R environment
-setwd("~/lncRNA_BC")
+setwd("../")
 CMLA = "Transcriptome"
 FASTQFILES = list.files(path=CMLA, pattern = "*.fastqsanger", fullnames = TRUE)
 FASTQFILES
@@ -34,4 +34,4 @@ list.files(CMLA_QC, ".fastqsanger", full.names=TRUE) #Indicates files for QC rep
 QC <- rqcQA(files, workers=1) #Run QC analysis#
 QC_REPORT <- rqcReport(QC) #Print and save QC report#
 browseURL(QC_REPORT) #Visualize QC report#
-save_html(QC_REPORT, "~/lncRNA_BC/Transcriptome/data/results/quality/QC.html", background = "white", libdir = "CMLA") #Save html file#
+save_html(QC_REPORT, "../Transcriptome/data/results/quality/QC.html", background = "white", libdir = "CMLA") #Save html file#
