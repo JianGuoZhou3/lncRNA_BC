@@ -61,8 +61,8 @@ This folders contains activities from our course, which are:
 - [Master Project Slides](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/Identification_of_lincRNA_as_predictive_biomarkers_in_breast_cancer.pdf): Identification_of_lincRNA_as_predictive_biomarkers_in_breast_cancer
 - An image for script to solve in [issue](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/Issue1_Volcano_plot_in_colors.jpg): Volcano plot problem.
 - Methodological [seminar](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/METHODOLOGICAL_SEMINAR_STAR_ALIGNER.md): STAR ALIGNER.
- - Images for seminar document:
-  - Maximal Mapable Prefixes [diagram](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/MMP.jpg)
-  - RNA-Seq methodology [diagram](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/RNASeq.jpg)
-  - RNA-Seq Workflow [diagram](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/RNAseqWorkflow.png)
+  - Images for seminar document:
+    - Maximal Mapable Prefixes [diagram](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/MMP.jpg)
+    - RNA-Seq methodology [diagram](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/RNASeq.jpg)
+    - RNA-Seq Workflow [diagram](https://github.com/LauraMCE/lncRNA_BC/blob/master/STB/RNAseqWorkflow.png)
 
