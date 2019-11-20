@@ -21,8 +21,8 @@ library(GenomicFeatures)
 library(Gviz)
 
 #Import reference genome: You should download Fasta file Genome Sequence (GRCh38.p.13) from here https://www.gencodegenes.org/human/ and copy in here ~/lncRNA_BC/Transcriptome/data/ #
-setwd("~/lncRNA_BC")
-load("~/lncRNA_BC/Transcriptome/data/GRCh38.p13.genome.fa.gz") ##You must unzip it before you work with fasta file##
+setwd("../")
+load("../Transcriptome/data/GRCh38.p13.genome.fa.gz") ##You must unzip it before you work with fasta file##
 HG38 <- unzip(GRCh38.p13.genome.fa.gz) #To unzip file#
 
 #To align FASTQ files
@@ -31,7 +31,7 @@ alread <- qAlign(sampleFile = FASTQFILES, genome = HG38, splicedAlignment = TRUE
 
 #To annotate transcripts. You should download gtf file GComprehensive gene annotation (v.32) from here https://www.gencodegenes.org/human/ and copy in here ~/lncRNA_BC/Transcriptome/data/#
 
-load("~/lncRNA_BC/Transcriptome/data/gencode.v32.annotation.gtf.gz") ##You must unzip it before you work with fasta file##
+load("../Transcriptome/data/gencode.v32.annotation.gtf.gz") ##You must unzip it before you work with fasta file##
 annofile <- unzip(gencode.v32.annotation.gtf.gz) #To unzip file#
 chrlen <- scanFaIndex(HG38)
 chrominfo <- data.frame(chrom = as.character(seqnames(chrlen)), length = width(chrlen), 
