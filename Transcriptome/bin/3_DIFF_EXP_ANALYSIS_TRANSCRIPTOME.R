@@ -11,8 +11,8 @@ library(goseq)
 library(GO.db)
 
 ##Generate a dds object##
-setwd("~/lncRNA_BC")
-clinic <- read.table("~/lncRNA_BC/Transcriptome/meta/clinic.csv") ##To obtain metadata for differential expression analysis##
+setwd("../")
+clinic <- read.table("../Transcriptome/meta/clinic.csv") ##To obtain metadata for differential expression analysis##
 dds <- DESeqDataSetFromMatrix(countData = genelevels, colData = clinic, design = ~ Response) ##Generates a dds object, which will be used for DESeq2##
 
 ##Run differential expression analysis with DESeq2##
@@ -25,7 +25,7 @@ CMLADIFF <- subset(CMLARESULT, CMLARESULT$padj < 0.05)
 
 CMLADIFFCUT <- subset(CMLADIFFCUT, CMLADIFF$log2FoldChange > 1.5) ##To obtain only differential expressed genes significant and overexpressed in No_response patients##
 
-write.csv(CMLADIFF, "~/lncRNA_BC/Transcriptome/data/results/tables/CMLADIFF.csv")
+write.csv(CMLADIFF, "../Transcriptome/data/results/tables/CMLADIFF.csv")
 
 ##Gene Ontology Analysis##
 
