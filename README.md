@@ -23,7 +23,7 @@ The final aim of this whole project is to predict functional association between
 
 - [Scripts and pipeline](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/bin) ```..\lncRNA_BC\Transcriptome\bin```: It contains .R files with functions and scripts for the biomarker identification pipeline, that are organized in chronological order of use. The complete pipeline is specified in [README](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/README.md).
 
-- [Data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data) ```..\lncRNA_BC\Transcriptome\data```: It contains all RNA-Seq raw data (fastq files). You can also find data in my OSF [profile](https://osf.io/pydw4/) (User: Laura Contreras. Public Project: [lincRNA as predictive biomarkers in Breast Cancer](https://osf.io/zw5ve/files/))
+- [Data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/data) ```..\lncRNA_BC\Transcriptome\data```: It contains all RNA-Seq raw data (fastq files). You can also find data in my OSF [profile](https://osf.io/pydw4/) (User: Laura Contreras. Public Project: [lincRNA as predictive biomarkers in Breast Cancer](https://osf.io/zw5ve/files/), Transcriptome data Folder)
    - Results ```..\lncRNA_BC\Transcriptome\data\results```: It contains all the processed files, and is subdivided into:
        - Quality ```..\lncRNA_BC\Transcriptome\data\results\quality```: It contains all the FastQC quality reports in .pdf format.
 
@@ -37,7 +37,7 @@ The final aim of this whole project is to predict functional association between
 
 - Scripts and pipeline ```..\lncRNA_BC\Exome\bin```: It contains .R files with functions and scripts for the biomarker identification pipeline, and they are by numerical order of use. The complete pipeline is specified in README.md.
 
-- Data ```..\lncRNA_BC\Exome\data```: It contains all exome raw data (fastq files).
+- Data ```..\lncRNA_BC\Exome\data```: It contains all exome raw data (fastq files). You can also find data in my OSF [profile](https://osf.io/pydw4/) (User: Laura Contreras. Public Project: [lincRNA as predictive biomarkers in Breast Cancer](https://osf.io/zw5ve/files/), Exome Folder)
 		
     - Results ```..\lncRNA_BC\Exome\data\results```: It contains all the processed files, and is subdivided into:
 			
