@@ -1,1 +1,1 @@
-#Here will be SAM and BAM files of alignment step from 1_QUALITY_CONTROL_AND_SEQUENCE_ALIGNMENT.R and 2_CALL_VARIANTS.R in ../Exome/bin#
+#Here will be SAM and BAM files of alignment step from 1_QUALITY_CONTROL_AND_SEQUENCE_ALIGNMENT.R and 2_CALL_VAR.R in ../Exome/bin#
