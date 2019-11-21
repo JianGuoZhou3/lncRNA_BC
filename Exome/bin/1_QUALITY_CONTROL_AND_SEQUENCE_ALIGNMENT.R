@@ -52,7 +52,7 @@ HG38 <- unzip(GRCh38.p13.genome.fa.gz) #To unzip file#
 tmp <- bowtie_build(references= ../Exome/data/HG38.fasta, outdir=indexDir, prefix="index", force=TRUE)  #To build a genomic index#
 head(tmp)
 
-for i in data; 
+for i in ../Exome/data; 
 do
 bowtie(sequences=../Exome/data/*.fastqsanger, 
        index=file.path(indexDir, "index"),       #To align and save sequence's alignment#
