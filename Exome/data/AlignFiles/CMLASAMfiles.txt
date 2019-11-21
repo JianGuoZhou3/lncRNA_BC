@@ -1,0 +1,1 @@
+#Here will be SAM files from 1_QUALITY_CONTROL_AND_SEQUENCE_ALIGNMENT.R in ../Exome/bin#
