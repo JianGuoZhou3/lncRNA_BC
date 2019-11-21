@@ -56,7 +56,7 @@ for i in data;
 do
 bowtie(sequences=../Exome/data/*.fastqsanger, 
        index=file.path(indexDir, "index"),       #To align and save sequence's alignment#
-       outfile=../Exome/data/samFiles, sam=TRUE,
+       outfile=../Exome/data/AlignFiles, sam=TRUE,
        best=TRUE, force=TRUE)
 done
 
