@@ -1,7 +1,7 @@
 # README
 ## Exome analysis
 
-In this folder will be all the data and scripts that were used for the identification of lincRNA as predictive biomarkers. It is divided in 3 main sections, in order to facilitate the organization of data and results. It is organized in 3 folders: /data, /meta and /bin, which are describe below:
+In this folder will be all the data and scripts that were used for the identification of CNVs which possibly correlate with lincRNA in a signature as predictive biomarkers. It is divided in 3 main sections, in order to facilitate the organization of data and results. It is organized in 3 folders: /data, /meta and /bin, which are describe below:
 
 ## [/data](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome/data)
 
@@ -21,28 +21,18 @@ In the other hand, all the scripts will be in [/bin](https://github.com/LauraMCE
 
 ### 1_QUALITY_CONTROL_AND_SEQUENCE_ALIGNMENT.R (~/bin/1_QUALITY_CONTROL_AND_SEQUENCE_ALIGNMENT.R)
 
-This script allows you to perform a quality analysis for fastq files and save the results in ~/data/result/quality. It also allows you to create alignment files (.sam files) and save it in ~/data/AlignFiles, as is specified in [CMLAALIGNEDFILES.txt](https://github.com/LauraMCE/lncRNA_BC/blob/master/Exome/data/AlignFiles/CMLAALIGNEDFILES.txt).
+This script allows you to perform a quality analysis for fastq files and save the results in ~/data/result/quality. It also allows you to create alignment files (.sam files) to reference genome [hg38](https://www.gencodegenes.org/human/)(Comprehensive gene annotation GTF and FASTA files, which contain ALL regions in genome) and save them in ~/data/AlignFiles, as is specified in [CMLAALIGNEDFILES.txt](https://github.com/LauraMCE/lncRNA_BC/blob/master/Exome/data/AlignFiles/CMLAALIGNEDFILES.txt).
 
 ### 2_CALL_VAR.R (~/bin/2_CALL_VAR.R)
 
-This script performs the alignment of sequence reads to the reference genome [hg38](https://www.gencodegenes.org/human/)(Comprehensive gene annotation GTF file, which contain ALL regions in genome). After that, this script generates a count table file to perform differential expression analysis with DESeq2 (Next script).
+This script performs the identification of CNV's . It generates BAM files from SAM files and save them in ~/data/AlignFiles. 
 
-### 3_DIFF_EXP_ANALYSIS_TRANSCRIPTOME.R (~/bin/3_DIFF_EXP_ANALYSIS_TRANSCRIPTOME.R)
+### 3_GRAPHICAL_ANALYSIS.R (~/bin/3_GRAPHICAL_ANALYSIS.R)
 
-This script uses the DESeq2 tool to perform a differential expression analysis. It also allows to perform a gene ontology analysis, and print the results in .csv in ~/data/results/tables.
+This script allows you to compile CNV's results and plot them, and save them in ~/data/res)ult, as is specified in [CNVCALLING.txt](https://github.com/LauraMCE/lncRNA_BC/blob/master/Exome/data/result/CNVCALLING.txt)
 
-### Gene Set Enrichment Analysis (WORK IN PROCESS! See [issue](https://github.com/LauraMCE/lncRNA_BC/issues/15))
+### Correlation Analysis (WORK IN PROCESS!)
 
-### Network Analysis (WORK IN PROCESS!)
+## [/meta](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome/meta)
 
-### 4_GRAPHICAL_ANALYSIS.R (~/bin/4_GRAPHICAL_ANALYSIS.R)
-
-This separate script enables the user to to modify or add graphical analyses. By default it contains the code to generate Volcano plots and heatmaps from DESEQ2 results, and then save them in ~/Graphs.
-
-### OTHERS
-
-The files [Choc_GSEA](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/bin/Choc_GSEA) and [Choc_Volcano_plot](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/bin/Choc_Volcano_plot) are 2 scripts that had errors and were added to solve a [GSEA](https://github.com/LauraMCE/lncRNA_BC/issues/15) and a [graphical](https://github.com/LauraMCE/lncRNA_BC/issues/8) issues. Because they were closed, the corrected code was inserted in their respective .R data in /bin.
-
-## [/meta](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/meta)
-
-Clinical data is provided in [/meta](https://github.com/LauraMCE/lncRNA_BC/tree/master/Transcriptome/meta), which contains a .txt table with clinical relevant information for Response to treatment analysis: Patient's ID, Response and Clincal tage (Stage).
+Clinical data is provided in [/meta](https://github.com/LauraMCE/lncRNA_BC/tree/master/Exome/meta), which contains a .csv table with clinical relevant information for Response to treatment analysis: Patient's ID, Response and Clincal stage (Stage).
