@@ -39,9 +39,9 @@ The final aim of this whole project is to predict functional association between
 
 - Data ```..\lncRNA_BC\Exome\data```: It contains all exome raw data (fastq files). You can also find data in my OSF [profile](https://osf.io/pydw4/) (User: Laura Contreras. Public Project: [lincRNA as predictive biomarkers in Breast Cancer](https://osf.io/zw5ve/files/), Exome Folder)
 		
-    - Results ```..\lncRNA_BC\Exome\data\results```: It contains all the processed files, and is subdivided into:
+    - Results ```..\lncRNA_BC\Exome\data\result```: It contains all the processed files, and is subdivided into:
 			
-       - Quality ```..\lncRNA_BC\Exome\data\results\quality```: It contains all the FastQC quality reports in .pdf format.
+       - Quality ```..\lncRNA_BC\Exome\data\result\quality```: It contains all the FastQC quality reports in .pdf format.
   
 - Meta ```..\lncRNA_BC\Exome\meta```: It contains the clinical information about samples in .csv format.
 		
