@@ -7,9 +7,21 @@ However, less than %50 of the patients could respond to treatment in the clinica
 In here, we analized 10 samples from 10 patients diagnosed with breast cancer which where candidates to receive neoadjuvant treatment. Samples were took before pharmacological administration and the RNA was extracted for RNA-Seq implementation (paired end, depth > 15 million reads). Then, clinical following was performed and we obtain 2 groups: No response patientes (8) and Response to neoadjuvant treatment patients (2).
 With this information, we performed a differentiall expression analysis in order to identify lincRNA which could be candidates to be a biomarkers in response to treatment (Wang, 2018). For that, we used Bioconductor tools in R to align and count (QuasR) and to perform differential expression analysis (DESeq2).
 
-In our results, we found that there is a set of lincRNA that are differentially over-expressed in No response patients (No_response group) (See heatmap in /Graphs and differential expression results table in /results). For that, we selected only significant log2FoldChange values (p<0.05) and only genes that were over-expressed at a cutof > 1.5 of log2FoldChange value. Although there is mRNA differentially over-expressed
+In our results, we found that there is a set of lincRNA that are differentially over-expressed in No response patients (No_response group) (See heatmap.jpg and pca.jpg in /Graphs and differential expression results table in /results). For that, we selected only significant log2FoldChange values (p<0.05) and only genes that were over-expressed at a cutof > 1.5 of log2FoldChange value. Although there is mRNA differentially over-expressed
 too, we notice that most of our differential expressed coding genes were already reported in other works, and this validate our results, but it didn't represent a real contribution. However, there is no information about the lincRNA in our results, which make it an opportunity to know more about breast cancer molecular processes. Although it is and opportunity, is a dissadvantage too, because 
 we have problems to elucidate the significant value of the expression of this lincRNA and how they contribute to breast carcinogenesis, and because of that it is a perspective to validate experimentally our results.
+
+![volcano_plot.JPG](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/Graphs/volcano_plot.JPG)
+
+Figure 1: Volcano plot from differential expression analysis that shows only lincRNA differentially expressed in No response patients.
+
+![heatmap.JPG](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/Graphs/heatmap.JPG)
+
+Figure 2: Heatmap from differential expression analysis in which we is observed the set of top lincRNA which are related to No response to neadjuvant treatment.
+
+![pca.JPG](https://github.com/LauraMCE/lncRNA_BC/blob/master/Transcriptome/Graphs/pca.JPG)
+
+Figure 3: Principal component analysis plot in which is shown the similarityin lincRNA expression of No response patients group, respect to Response group.
 
 Experimental validation has another problems, because of the lower expression levels of lincRNAs in tissues, which is important for the regulatory function that they have in physiological conditions (Quinn, 2016). However, many bioinformatic tools are available to make approximations of lincRNA properties and functions, which makes this perspective more plausible.
 
