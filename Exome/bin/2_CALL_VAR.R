@@ -15,35 +15,25 @@ library(exomeCopy)
 
 #Detect copy number variants#
 
-for i in ../Exome/data/AlignFiles;
+for (i in ../Exome/data/AlignFiles);
 {
 asSam(*.sam, destination=sub("\\.bam", ""), indexDestination=TRUE)}  #Converts SAM to BAM files#
 
 
 library(exomeCopy)
-target.file <- "targets.bed"
-bam.files <- list.files(*.bam)
-sample.names <- c(clinic$ID)
-reference.file <- "../Exome/data/HG38.gtf"
-target.df <- read.delim(target.file, header = FALSE)
-target <- GRanges(seqname = target.df[, 1], IRanges(start = target.df[,+ 2] + 1, end = target.df[, 3]))
-counts <- target
-for (i in 1:length(bam.files)) {
-+ mcols(counts)[[sample.names[i]]] <- countBamInGRanges(bam.files[i],
-+ target)
+
+bam.files <- list.files(../Exome/data/AlignFiles/*.bam) #Set all BAM files to work with#
+sample.names <- c(clinic$ID) #Set names of samples#
+reference.file <- "../Exome/data/HG38.gtf" #Stablish reference genome#
+runExomeCopy <- function(sample.name, seqs) {
++ lapply(seqs, function(seq.name) exomeCopy(example.counts[seqnames(example.counts) ==
++ seq.name], sample.name, X.names = c("log.bg",
++ "GC", "GC.sq", "width"), S = 0:4, d = 2))
 + }
-counts$GC <- getGCcontent(target, reference.file)
-counts$GC.sq <- counts$GC^2
-counts$bg <- generateBackground(sample.names, counts,
-+ median)
-counts$log.bg <- log(counts$bg + 0.1)
-counts$width <- width(counts)
-fit.list <- lapply(sample.names, function(sample.name) {
-+ lapply(seqlevels(target), function(seq.name) {
-+ exomeCopy(counts[seqnames(counts) == seq.name],
-2
-+ sample.name, X.names = c("log.bg", "GC",
-+ "GC.sq", "width"), S = 0:4, d = 2)
-+ })
-+ })
-compiled.segments <- compileCopyCountSegments(fit.list)
+seqs <- c("chr1", "chr1a")
+samples <- exome.samples[1:8]
+names(samples) <- samples
+t0 <- as.numeric(proc.time()[3])
+fit.list <- lapply(samples, runExomeCopy, seqs)
+t1 <- as.numeric(proc.time()[3])
+time.elapsed <- as.numeric(t1 - t0) #This is a NON Proved script. Please check Repo_Analysis#
