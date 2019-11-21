@@ -1,0 +1,1 @@
+#Here will be the results in .txt files and plots in .jpg or .png files from CNV detection from 2_CALL_VAR.R and 3_GRAPHICAL_ANALYSIS in ../Exome/bin#
